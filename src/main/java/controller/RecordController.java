@@ -22,7 +22,7 @@ public class RecordController {
 	
 	@RequestMapping("/all")
 	public Hashtable<String, Record> getAll() {
-		
+
 		return rs.getAll();
 	}
 	@RequestMapping("{id}")

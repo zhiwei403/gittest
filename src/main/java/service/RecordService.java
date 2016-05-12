@@ -9,15 +9,19 @@ import java.util.Map;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.ISODateTimeFormat;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RecordService {
+
 	Hashtable<String, model.Record> records = new Hashtable<String, Record>();
 	public RecordService() {
 		String Date = "2016-05-09T17:31:01.000Z";
 		DateTime dt = ISODateTimeFormat.dateTime().parseDateTime(Date);
+		
+		
 		
 		Record r = new Record();
 		r.setCameraid("1");
@@ -43,6 +47,7 @@ public class RecordService {
 		
 	}
 	public Hashtable<String,Record> getAll() {
+		
 		return records;
 	}
 
